@@ -26,10 +26,9 @@ Below are the list of libraries covered in this repo.
 		First Install the MatPlot library from Command prompt
 		
 		For windows :
-		
-		```
+	
 		pip install matplotlib
-		```
+		
 		
 ### Pandas
 
