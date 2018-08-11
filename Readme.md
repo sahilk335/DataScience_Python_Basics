@@ -7,7 +7,7 @@ Below are the list of libraries covered in this repo.
 ## Python Libraries
 
 ```
-* NumPy - for faster  mathematical operations (matrix multiplon, merging arrays etc)
+* NumPy - for faster  mathematical operations (matrix multiplication, merging arrays etc)
 
 * MatPlot - for plotting graphical representation based on the data given (eg scatter plots 
 			,pie chart)
