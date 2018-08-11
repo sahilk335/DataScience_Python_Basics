@@ -15,5 +15,8 @@ y=[4,5,6]
 
 plt.plot(x,y,label="line",color='r')
 #legend displays the info box
+plt.xlabel("X-Axis")
+plt.ylabel("Y-Axis")
+plt.title("Plot Lines")
 plt.legend()
 plt.show()
