@@ -4,7 +4,7 @@ Created on Sun Aug 12 06:11:57 2018
 
 @author: sahil
 
-Title : 
+Title : Load Data from internet
 """
 import matplotlib.pyplot as plt
 import numpy as np
