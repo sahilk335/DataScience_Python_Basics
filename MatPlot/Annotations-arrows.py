@@ -1,21 +1,26 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sun Aug 12 20:18:43 2018
+Created on Tue Aug 14 04:35:16 2018
 
 @author: sahil
 
-Title : Candlesticks OHLC in graphs
-
+Title : 
 """
 
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 import matplotlib.ticker as mticker
 from mpl_finance import candlestick_ohlc
+from matplotlib import style
 
 import numpy as np
 import urllib
 import datetime as dt
+
+style.use('fivethirtyeight')
+print(plt.style.available)
+
+print(plt.__file__)
 
 
 def bytespdate2num(fmt, encoding='utf-8'):
@@ -60,22 +65,29 @@ def graph_data(stock):
 
 
     candlestick_ohlc(ax1, ohlc, width=0.4, colorup='#77d879', colordown='#db3f3f')
-
+  
     for label in ax1.xaxis.get_ticklabels():
         label.set_rotation(45)
 
     ax1.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
     ax1.xaxis.set_major_locator(mticker.MaxNLocator(10))
     ax1.grid(True)
+    ax1.annotate('Bad News!',(date[9],highp[9]),
+                 xytext=(0.8, 0.9), textcoords='axes fraction',
+                 arrowprops = dict(facecolor='grey',color='grey'))
     
+##    # Text placement example:
+##    font_dict = {'family':'serif',
+##                 'color':'darkred',
+##                 'size':15}
+##    ax1.text(date[10], closep[1],'Text Example', fontdict=font_dict)
 
     plt.xlabel('Date')
     plt.ylabel('Price')
     plt.title(stock)
-    plt.legend()
+    #plt.legend()
     plt.subplots_adjust(left=0.09, bottom=0.20, right=0.94, top=0.90, wspace=0.2, hspace=0)
     plt.show()
 
 
-graph_data('EBAY')
-
+graph_data('TSLA')
