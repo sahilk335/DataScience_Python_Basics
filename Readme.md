@@ -32,4 +32,16 @@ Below are the list of libraries covered in this repo.
 		
 ### Pandas
 
-	---TO DO ---
+		Install Pandas from command prompt
+		
+		For windows :
+		
+			pip install pandas
+
+		For downloading DataSets make account on quandl.com
+	
+		Install quandl module in python using command
+		
+		For windows :
+		
+			pip install quandl
